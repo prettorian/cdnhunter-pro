@@ -1,40 +1,17 @@
-#!/bin/bash
+# 🕵️ CDNHUNTER PRO
 
-# ==============================================================================
-# CDNHUNTER PRO - Advanced CDN Finder & Origin IP Hunter for Termux
-# Versión: 2.2 (Corregida y Optimizada)
-# ==============================================================================
+Herramienta avanzada para encontrar IPs de origen detrás de CDNs (Cloudflare, Akamai, etc.) diseñada para Termux.
 
-# --- CONFIGURACIÓN DE COLORES ---
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-WHITE='\033[1;37m'
-NC='\033[0m' # No Color
-BOLD='\033[1m'
+## 🚀 Instalación Rápida en Termux
 
-# --- FUNCIÓN BANNER ---
-banner() {
-    clear
-    echo -e "${CYAN}"
-    echo "  _______  _______  _______  _        _______ "
-    echo " (  ____ )(  ___  )(  ____ \( (    /|(  ____ \\"
-    echo " | (    )|| (   ) || (    \/|  \  ( || (    \\/"
-    echo " | (____)|| |   | || |      |   \ | || |      "
-    echo " |  _____)| |   | || |      | (\ \) || |      "
-    echo " | (      | |   | || |      | | \   || |      "
-    echo " | )      | (___) || (____/\| )  \  || (____/\\"
-    echo " |/       (_______)(_______/|/    )_)(_______/"
-    echo -e "            ${WHITE}Advanced CDN & Origin IP Finder${NC}"
-    echo -e "    ${YELLOW}----------------------------------------${NC}"
-    echo ""
-}
+Copia y pega estos comandos:
 
-# --- VERIFICAR DEPENDENCIAS ---
-check_deps() {
+```bash
+pkg update -y && pkg install git curl jq dnsutils -y
+git clone https://github.com/TU_USUARIO/cdnhunter-pro.git
+cd cdnhunter-pro
+chmod +x cdnhunter.sh
+./cdnhunter.shcheck_deps() {
     local deps=("curl" "jq" "dig" "grep" "awk")
     local missing=0
     
